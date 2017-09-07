@@ -1,5 +1,6 @@
-<br><input [(ngModel)] = "Details.name" />
+<br><input [(ngModel)]="Details.name"/>
 <p>
-<button (click)="makeYell($event)">Hit Me</button>
-{{Details.name}}
+  <button (click)="makeYell($event)">Hit Me</button>
+  {{Details.name}}
+  <button (click)="logit()">Home log</button>
 </p>

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-
+import {LogginService} from '../loggin.service';
 
 @Component({
   selector: 'app-home',
@@ -8,24 +8,28 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  myData= 'testing piece';
-  myBool= 'true';
+  myData = 'testing piece';
+  myBool = 'true';
 
-@Input() ninja;
-@Output() OnYell= new EventEmitter();
+  @Input() ninja;
+  @Output() OnYell = new EventEmitter();
 
   Details = {
     name: 'vignesh',
     age: 25
   };
 
-makeYell(e) {
-  this.OnYell.emit(e);
-}
+  makeYell(e) {
+    this.OnYell.emit(e);
+  }
 
 
+  constructor(private logger: LogginService) {
+  }
 
-  constructor() { }
+  logit(){
+    console.log('home log');
+  }
 
   ngOnInit() {
   }
