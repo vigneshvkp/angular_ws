@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-
+import {ActivatedRoute, Data} from '@angular/router';
+import {DataService} from '../data.service';
 import {LogginService} from '../loggin.service';
 
 @Component({
@@ -10,12 +10,17 @@ import {LogginService} from '../loggin.service';
 })
 export class DirectoryComponent implements OnInit {
   // ninja: string;
-  ninjas = [
-    {name: 'ram', belt: 'black'},
-    {name: 'vimal', belt: 'red'},
-    {name: 'kar', belt: 'purple'},
-    {name: 'mon', belt: 'orange'}
-  ];
+
+  ninjas = [];
+
+  /*    // declared as json so deleting it.
+    ninjas = [
+      {name: 'ram', belt: 'black'},
+      {name: 'vimal', belt: 'red'},
+      {name: 'kar', belt: 'purple'},
+      {name: 'mon', belt: 'orange'}
+    ]; */
+
 
   sear: string;
 
@@ -25,7 +30,7 @@ export class DirectoryComponent implements OnInit {
   //   this.ninja = route.snapshot.params['ninja'];
   // }
 
-  constructor(private logger: LogginService) {
+  constructor(private logger: LogginService, private dataserv: DataService) {
 
   }
 
@@ -35,6 +40,9 @@ export class DirectoryComponent implements OnInit {
 
 
   ngOnInit() {
+    this.dataserv.fetchData().subscribe(
+      (data) => this.ninjas = data
+  );
   }
 
 }

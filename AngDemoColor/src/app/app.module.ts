@@ -6,7 +6,9 @@ import {HomeComponent} from './home/home.component';
 import {DirectoryComponent} from './directory/directory.component';
 import {RouterModule} from '@angular/router';
 import {HttpModule} from '@angular/http';
-import { FilterPipe } from './filter.pipe';
+import {FilterPipe} from './filter.pipe';
+import {LogginService} from './loggin.service';
+import {DataService} from './data.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import { FilterPipe } from './filter.pipe';
       }
     ])
   ],
-  providers: [],
+  providers: [LogginService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
