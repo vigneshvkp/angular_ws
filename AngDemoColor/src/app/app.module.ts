@@ -6,12 +6,14 @@ import {HomeComponent} from './home/home.component';
 import {DirectoryComponent} from './directory/directory.component';
 import {RouterModule} from '@angular/router';
 import {HttpModule} from '@angular/http';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DirectoryComponent
+    DirectoryComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import {HttpModule} from '@angular/http';
 
     RouterModule.forRoot([
       {
-        path: 'directory/:ninja',
+        // path: 'directory/:ninja',
+        path: 'directory',
         component: DirectoryComponent
       },
       {

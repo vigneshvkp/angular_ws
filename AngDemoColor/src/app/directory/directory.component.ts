@@ -1,17 +1,34 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+// import {FilterPipe} from '../filter.pipe';
 
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
-  styleUrls: ['./directory.component.css']
+  styleUrls: ['./directory.component.css'],
+
 })
 export class DirectoryComponent implements OnInit {
-  ninja: string;
+  // ninja: string;
+  ninjas = [
+    {name: 'ram', belt: 'black'},
+    {name: 'vimal', belt: 'red'},
+    {name: 'kar', belt: 'purple'},
+    {name: 'mon', belt: 'orange'}
+  ];
 
-  constructor(private route: ActivatedRoute) {
-    this.ninja = route.snapshot.params['ninja'];
+  sear: string;
+
+
+  // path param
+  // constructor(private route: ActivatedRoute) {
+  //   this.ninja = route.snapshot.params['ninja'];
+  // }
+
+  constructor() {
+
   }
+
 
   ngOnInit() {
   }
