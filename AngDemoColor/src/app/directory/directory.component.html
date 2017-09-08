@@ -21,5 +21,11 @@
       </div>
     </li>
   </ul>
-  <button (click)="logit()">Logging </button>
+
+  <button (click)="logit()">Logging</button>
+</div>
+<div id="add-ninja">
+  <input type="text" ([ngModel])="name"/>
+  <input type="text" ([ngModel])="belt"/>
+  <button (click)="putdata(name,belt)">Insert</button>
 </div>

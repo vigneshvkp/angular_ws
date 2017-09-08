@@ -9,7 +9,24 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="../assets/styles.css" rel="stylesheet" type="text/css"/>
 </head>
+
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+
 <body>
-  <app-root>Loading ....</app-root>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDNkGKrXSdbi5ll_mIw5faqwJQ41q2E0Co",
+    authDomain: "ang-firebase-24ebd.firebaseapp.com",
+    databaseURL: "https://ang-firebase-24ebd.firebaseio.com",
+    projectId: "ang-firebase-24ebd",
+    storageBucket: "ang-firebase-24ebd.appspot.com",
+    messagingSenderId: "649748061892"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<app-root>Loading ....</app-root>
 </body>
 </html>
