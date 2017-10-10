@@ -28,4 +28,8 @@ export class LoginComponent implements OnInit {
     }
     return false;
   }
+
+  excapefunc() {
+    this.router.navigate(['project']);
+  }
 }

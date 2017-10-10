@@ -7,30 +7,69 @@ import {HeaderComponent} from './header/header.component';
 import {MainpageComponent} from './mainpage/mainpage.component';
 // to route between components
 import {RouterModule, Routes} from '@angular/router';
-import { FormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 // to create any service that access the json and provide to us
-import { DemoserviceService} from './services/demoservice.service';
-import { HttpModule} from '@angular/http';
-import { AboutusComponent } from './aboutus/aboutus.component';
-import { FooterComponent } from './footer/footer.component';
-import { UserService} from './services/user.service';
-import { AuthGuardGuard} from './auth-guard.guard';
-const appRoutes: Routes = [
-  {
-    path: '',
-    component: LoginComponent
-  },
-  {
-    path: 'mainpage',
-    canActivate : [AuthGuardGuard],
-    component: MainpageComponent
-  },
-  {
-    path: 'aboutus',
-    component: AboutusComponent
-  }
+import {DemoserviceService} from './services/demoservice.service';
+import {HttpModule} from '@angular/http';
+import {AboutusComponent} from './aboutus/aboutus.component';
+import {FooterComponent} from './footer/footer.component';
+import {UserService} from './services/user.service';
+import {AuthGuardGuard} from './auth-guard.guard';
+import {UserComponent} from './user/user.component';
+import {NotfoundComponent} from './notfound/notfound.component';
+import {ProjectComponent} from './project/project.component';
+import { ChildComponent } from './project/child/child.component';
 
-];
+const appRoutes: Routes = [
+    {
+      path: '',
+      component: LoginComponent
+    },
+    {
+      path: 'users/:name',
+      component: UserComponent
+    },
+    {
+      path: 'users',
+      pathMatch: 'prefix',
+      children: [
+        {
+          path: ':name',
+          children: [
+            {
+              path: ':id',
+              component: UserComponent
+            }
+          ]
+        }
+      ]
+    },
+    {
+      path: 'mainpage',
+      canActivate:
+        [AuthGuardGuard],
+      component:
+      MainpageComponent
+    }
+    ,
+    {
+      path: 'aboutus',
+      component:
+      AboutusComponent
+    }
+    ,
+    {
+      path: 'project',
+      component: ProjectComponent
+    },
+    {
+      path: '**',
+      component:
+      NotfoundComponent
+    }
+
+  ]
+;
 
 @NgModule({
   declarations: [
@@ -39,7 +78,11 @@ const appRoutes: Routes = [
     HeaderComponent,
     MainpageComponent,
     AboutusComponent,
-    FooterComponent
+    FooterComponent,
+    UserComponent,
+    NotfoundComponent,
+    ProjectComponent,
+    ChildComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes), // set to route between screens
