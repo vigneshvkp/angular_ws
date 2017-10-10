@@ -1,0 +1,29 @@
+#header img.logo1 {
+  position: absolute;
+  float: left;
+  top:18px;
+  left:10px;
+}
+
+#header img.logo2 {
+  position: absolute;
+  top:5px;
+  right:10px;
+}
+
+#header{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  height:68px;
+  border-bottom:1px solid #1780a3;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+ }

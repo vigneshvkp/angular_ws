@@ -3,7 +3,7 @@ import {ActivatedRoute, Data} from '@angular/router';
 import {DataService} from '../data.service';
 import {LogginService} from '../loggin.service';
 import {Http} from '@angular/http';
-import {error} from "util";
+import {error} from 'util';
 
 declare var firebase: any;
 
