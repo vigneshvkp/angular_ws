@@ -22,7 +22,7 @@ public class Project {
 	String projectName;
 	String createdBy;
 	String custId;
-	String DeptId;
+	String deptId;
 	
 
 	public Integer getProjectId() {
@@ -53,10 +53,10 @@ public class Project {
 		this.custId = custId;
 	}
 	public String getDeptId() {
-		return DeptId;
+		return deptId;
 	}
 	public void setDeptId(String deptId) {
-		DeptId = deptId;
+		this.deptId = deptId;
 	}
 	public Project(Integer projectId, String projectName, String createdBy, String custId, String deptId) {
 		super();
@@ -64,10 +64,9 @@ public class Project {
 		this.projectName = projectName;
 		this.createdBy = createdBy;
 		this.custId = custId;
-		DeptId = deptId;
+		this.deptId = deptId;
 	}
 	public Project() {
-		super();
 	}
 	
 	

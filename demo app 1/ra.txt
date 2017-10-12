@@ -1,0 +1,2 @@
+From json file data is displayed on screen
+each one inserted via spring boot.

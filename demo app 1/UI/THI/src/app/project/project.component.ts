@@ -63,7 +63,7 @@ export class ProjectComponent implements OnInit {
     this.project.custId = pjtobj.cusid;
     this.project.deptId = pjtobj.deptid;
   console.log('before call insert');
-    this.pjtservice.insertProject(this.project);
+    this.pjtservice.create(this.project);
     console.log('after call insert');
   }
 
