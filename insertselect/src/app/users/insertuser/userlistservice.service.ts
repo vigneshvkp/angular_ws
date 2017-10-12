@@ -7,7 +7,7 @@ import { Response} from '@angular/http';
 @Injectable()
 export class UserlistserviceService {
 
-  private url= 'http://localhost:8080/project_login/rest/insert/insertuser';
+  private url= 'http://localhost:8080/projects/insert';
   constructor(private http: Http) {
 
   }

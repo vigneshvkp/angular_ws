@@ -3,11 +3,28 @@ h2{
 }
 
 form{
-  max-width: 80%;
-  border: double rgba(0,0,0,0.49);
+  border: ridge rgba(0,0,0,0.49);
   background-color: #f2f2f2;
+  max-height: 50%;
 }
 
 h3{
   margin-left: 2%;
+}
+
+
+table{
+  border-bottom: thin;
+}
+
+.even{
+  background-color: transparent;
+}
+
+.odd{
+  background-color: #b3b3b3;
+}
+
+tr:hover{
+  background-color:grey;
 }

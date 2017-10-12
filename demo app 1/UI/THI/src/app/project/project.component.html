@@ -8,9 +8,53 @@
 
 -->
 <input type="text" #projectname/>
-<p>
-  <app-child>Emp data displays hre </app-child>
-</p>
+<form>
+  <table border="2px" width="100%">
+    <tr>
+      <td colspan="2"><h2>Project Details </h2></td>
+    </tr>
+    <tr>
+      <td style="width: 50%" height="10"><h3>Project Id : </h3></td>
+      <td style="width: 50%"><h3>{{ selectedProject.id }}</h3></td>
+    </tr>
+    <tr>
+      <td><h3>Project Name : </h3></td>
+      <td><h3>{{ selectedProject.name }}</h3></td>
+    </tr>
+    <tr>
+      <td><h3>Created By : </h3></td>
+      <td><h3>{{ selectedProject.by }}</h3></td>
+    </tr>
+    <tr>
+      <td><h3>Customer Id: </h3></td>
+      <td><h3>{{ selectedProject.cusid }}</h3></td>
+    </tr>
+    <tr>
+      <td><h3>Department Id : </h3></td>
+      <td><h3>{{ selectedProject.deptid }}</h3></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)="insertProject(selectedProject)">Insert</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+
+<form>
+  <p>
+    <app-child
+      [projectId]="project.projectId"
+      [projectName]="project.name"
+      [createdBy]="project.createdBy"
+      [custId]="project.custId"
+      [deptId]="project.deptId"
+      (sendRecord)="getRecord($event)"
+      *ngFor="let project of pjtRecord">Emp data displays hre
+    </app-child>
+  </p>
+</form>
 
 <!--   ex with input and output between components-->
 

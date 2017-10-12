@@ -19,6 +19,8 @@ import {UserComponent} from './user/user.component';
 import {NotfoundComponent} from './notfound/notfound.component';
 import {ProjectComponent} from './project/project.component';
 import { ChildComponent } from './project/child/child.component';
+import { PjtService} from './project/services/pjt.service';
+import { Project} from './project/pjt';
 
 const appRoutes: Routes = [
     {
@@ -90,7 +92,7 @@ const appRoutes: Routes = [
     FormsModule,   // to specify the component value in html through ngmodel..value change in obj it change in html
     HttpModule
   ],
-  providers: [DemoserviceService, UserService, AuthGuardGuard],
+  providers: [DemoserviceService, UserService, AuthGuardGuard, PjtService, Project],
   bootstrap: [AppComponent]
 })
 export class AppModule {

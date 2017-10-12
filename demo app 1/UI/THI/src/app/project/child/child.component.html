@@ -1,10 +1,43 @@
+<script>
+  $(document).ready(function () {
+    $(xmlns = "" / > "tr:odd").css({
+      "background-color": "#000",
+      "color": "#fff"
+    });
+  });
+</script>
 <form>
   <div>
-    <h2>Project Details </h2>
-    <h3>Project Id :</h3>
-    <h3>Project Name :</h3>
-    <h3>Created By :</h3>
-    <h3>Customer Id:</h3>
-    <h3>Department Id :</h3>
+    <table width="100%">
+      <tr ngClass="even">
+        <td colspan="2"><h2>Project Details </h2></td>
+      </tr>
+      <tr ngClass="odd">
+        <td style="width: 50%"><p>Project Id : </p></td>
+        <td style="width: 50%"><p>{{ projectId }}</p></td>
+      </tr>
+      <tr ngClass="even">
+        <td><p>Project Name : </p></td>
+        <td><p>{{ projectName }}</p></td>
+      </tr>
+      <tr ngClass="odd">
+        <td><p>Created By : </p></td>
+        <td><p>{{ createdBy }}</p></td>
+      </tr>
+      <tr ngClass="even">
+        <td><p>Customer Id: </p></td>
+        <td><p>{{ custId }}</p></td>
+      </tr>
+      <tr ngClass="odd">
+        <td><p>Department Id : </p></td>
+        <td><p>{{ deptId }}</p></td>
+      </tr>
+      <tr ngClass="even">
+        <td></td>
+        <td>
+          <button (click)="selectRecord()" style="width: 100%;color: #4CAF50;background-color: #1780a3"  >Select Record</button>
+        </td>
+      </tr>
+    </table>
   </div>
 </form>
