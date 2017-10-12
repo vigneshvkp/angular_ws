@@ -1,4 +1,4 @@
-package thi.vkp.dao;
+package thi.vkp.repository;
 
 import java.util.List;
 
