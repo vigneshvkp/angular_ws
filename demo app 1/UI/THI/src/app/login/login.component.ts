@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
     e.preventDefault();
     console.log(e);
     this.user.setUserLoggedIn();
-    let user = e.target.elements[0].value;
-    let pass = e.target.elements[1].value;
+    const user = e.target.elements[0].value;
+    const pass = e.target.elements[1].value;
     console.log('user ' + user);
     console.log('pass ' + pass);
     if (user === 'admin' && pass === 'admin') {

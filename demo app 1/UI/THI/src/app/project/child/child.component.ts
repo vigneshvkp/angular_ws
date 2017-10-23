@@ -10,9 +10,9 @@ export class ChildComponent implements OnInit {
   @Input() myownvalue;
   @Output('myOutput') myOutput = new EventEmitter();
 
-
+// the following fields referred from parent component. via html
   @Input() projectId: number;
-  @Input() projectName: string;
+  @Input() projectName: String;
   @Input() createdBy: String;
   @Input() custId: String;
   @Input() deptId: String;

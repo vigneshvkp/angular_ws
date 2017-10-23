@@ -12,12 +12,15 @@ export class PjtService {
   private headers = new Headers({'Content-Type': 'application/json'});
 
   private insurl = 'http://localhost:8080/projects/insert';
+  private url = 'http://localhost:8080/projects/listprojects';
+  // private url = '/assets/project_details.json';
 
   constructor(public http: Http) {
   }
 
   fetchData() {
-    return this.http.get('/assets/project_details.json').map(
+
+    return this.http.get(this.url).map(
       (res) => res.json()
     );
   }

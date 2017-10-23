@@ -58,6 +58,7 @@ public class ProjectController {
 	public Project insert(@RequestBody Project project) {
 		System.out.println("insert func called");
 		projectDao.save(new Project(project.getProjectId(),project.getProjectName(),project.getCreatedBy(),project.getCustId(),project.getDeptId()));
+		System.out.println("after save");
 		return project;
 	}
 	
@@ -67,6 +68,15 @@ public class ProjectController {
 		List<User> list = new ArrayList<>();
 		Iterable<User> customers = userdao.findAll();
 		customers.forEach(list::add);
+		return list;
+	}
+	
+	@CrossOrigin
+	@GetMapping(value="/listprojects",  produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<Project> getAllProjects() {
+		List<Project> list = new ArrayList<>();
+		Iterable<Project> projects = projectDao.findAll();
+		projects.forEach(list::add);
 		return list;
 	}
 	

@@ -15,6 +15,7 @@ public interface ProjectDao extends CrudRepository<Project, Integer> {
 	public Project findByProjectId(String id);
 	public Project findByProjectName(String id);
 	public List<Project> findAll();
+	public int delete(int id);
 //	public void insert(Project project);
 //	public void delete(Project project);
 //	public void update(Project project);

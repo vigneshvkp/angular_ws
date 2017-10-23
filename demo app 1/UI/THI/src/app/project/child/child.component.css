@@ -3,19 +3,15 @@ h2{
 }
 
 form{
-  border: ridge rgba(0,0,0,0.49);
+
   background-color: #f2f2f2;
-  max-height: 50%;
+
 }
 
 h3{
   margin-left: 2%;
 }
 
-
-table{
-  border-bottom: thin;
-}
 
 .even{
   background-color: transparent;
@@ -27,4 +23,14 @@ table{
 
 tr:hover{
   background-color:grey;
+}
+
+
+tr:nth-child(2) {
+  background-color: #b3b3b3;
+}
+
+table{
+  outline-color: #4d4d4d;
+
 }

@@ -7,31 +7,52 @@
 
 
 -->
-<input type="text" #projectname/>
-<form>
-  <table border="2px" width="100%">
+<!--  This input box refers a view port in comp.ts which runs on specific timeout -->
+<input type="text" #projectname id="projectname"/>
+<form style=" margin: 30px 20%;">
+  <table width="100%">
     <tr>
-      <td colspan="2"><h2>Project Details </h2></td>
+      <th colspan="2"><h2>Project Details </h2></th>
     </tr>
     <tr>
-      <td style="width: 50%" height="10"><h3>Project Id : </h3></td>
-      <td style="width: 50%"><h3>{{ selectedProject.id }}</h3></td>
+      <td><h3>Project Id : </h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.id" name="id"/>
+        </h3>
+      </td>
     </tr>
     <tr>
       <td><h3>Project Name : </h3></td>
-      <td><h3>{{ selectedProject.name }}</h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.name" name="pjtname"/>
+        </h3>
+      </td>
     </tr>
     <tr>
       <td><h3>Created By : </h3></td>
-      <td><h3>{{ selectedProject.by }}</h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.by" name="by"/>
+        </h3>
+      </td>
     </tr>
     <tr>
       <td><h3>Customer Id: </h3></td>
-      <td><h3>{{ selectedProject.cusid }}</h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.cusid" name="custid"/>
+        </h3>
+      </td>
     </tr>
     <tr>
       <td><h3>Department Id : </h3></td>
-      <td><h3>{{ selectedProject.deptid }}</h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.deptid" name="deptid"/>
+        </h3>
+      </td>
     </tr>
     <tr>
       <td colspan="2">
@@ -40,13 +61,27 @@
     </tr>
   </table>
 </form>
+<form style="margin: 0px 20%;">
+  <div>
+    <table width="100%">
+      <tr class="mytr">
+        <td width="10%">Id</td>
+        <td width="30%">Project Name</td>
+        <td width="20%">Created By</td>
+        <td width="15%">Customer Id</td>
+        <td width="15%">Department Id</td>
+        <td width="10%"></td>
+      </tr>
+    </table>
+  </div>
 
+</form>
 
 <form>
   <p>
     <app-child
       [projectId]="project.projectId"
-      [projectName]="project.name"
+      [projectName]="project.projectName"
       [createdBy]="project.createdBy"
       [custId]="project.custId"
       [deptId]="project.deptId"
