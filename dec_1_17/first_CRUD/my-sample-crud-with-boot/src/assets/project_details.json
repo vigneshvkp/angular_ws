@@ -1,0 +1,39 @@
+[
+  {
+    "projectId": "1",
+    "name": "Astra",
+    "createdBy": "Ace345",
+    "custId": "112",
+    "deptId": "101"
+  },
+
+  {
+    "projectId": "2",
+    "name": "Carina",
+    "createdBy": "ace321",
+    "custId": "312",
+    "deptId": "102"
+  },
+
+  {
+    "projectId": "3",
+    "name": "Bedrock",
+    "createdBy": "acd444",
+    "custId": "162",
+    "deptId": "101"
+  },
+  {
+    "projectId": "4",
+    "name": "Avg",
+    "createdBy": "ace564",
+    "custId": "612",
+    "deptId": "102"
+  },
+  {
+    "projectId": "5",
+    "name": "Maple",
+    "createdBy": "ace643",
+    "custId": "132",
+    "deptId": "101"
+  }
+]

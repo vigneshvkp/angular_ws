@@ -1,0 +1,89 @@
+<!--  below will emit data from child to parent -->
+<!--
+<app-child
+  [myownvalue]="2"
+  (myOutput)="myOutputMethod($event)">    -- sync with child comp
+</app-child>
+
+
+-->
+
+<form style=" margin: 30px 20%;">
+  <table width="100%">
+    <tr>
+      <th colspan="2"><h2>Project Details </h2></th>
+    </tr>
+    <tr>
+      <td><h3>Project Id : </h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.id" name="id" value="selectedProject.id"/>
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><h3>Project Name : </h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.name" name="pjtname"/>
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><h3>Created By : </h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.by" name="by"/>
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><h3>Customer Id: </h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.cusid" name="custid"/>
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><h3>Department Id : </h3></td>
+      <td>
+        <h3>
+          <input type="text" [(ngModel)]="selectedProject.deptid" name="deptid"/>
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)="insertProject(selectedProject)">Insert</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<form style="margin: 0px 20%;">
+  <div>
+    <table width="100%">
+      <tr>
+        <td>Project Id</td>
+        <td>Project Name</td>
+        <td>Created BY</td>
+        <td>Cust Id</td>
+        <td>Dept Id</td>
+      </tr>
+      <tr  *ngFor="let project of pjtRecord">
+        <td width="10%">{{ project.projectId }}</td>
+        <td width="30%">{{ project.name }}</td>
+        <td width="20%">{{ project.createdBy }}</td>
+        <td width="15%">{{ project.custId }}</td>
+        <td width="15%">{{ project.deptId }}</td>
+        <td ngClass="even" width="10%">
+          <button (click)="selectRecord(project)" style="width: 100%;color: #4CAF50;background-color: #1780a3">Select Record
+          </button>
+        </td>
+      </tr>
+
+
+    </table>
+  </div>
+</form>

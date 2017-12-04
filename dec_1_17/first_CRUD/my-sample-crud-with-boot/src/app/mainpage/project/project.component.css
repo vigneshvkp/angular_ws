@@ -1,0 +1,45 @@
+table{
+  width: 100%;
+  border-width: 0px;
+  border-spacing: 0px;
+  border-style: none;
+  padding: 0px;
+  border-collapse: collapse;
+  background-color: #4d4d4d;
+}
+
+input {
+  width: 100%;
+  height: 60%;
+  border: none;  /* if you want no box around the input field */
+  background-color: transparent;
+
+  cursor: auto;
+  font-size: large;
+}
+
+
+th{
+  background:pink;
+  padding: 0px; border-color: black;
+}
+
+tr:nth-child(even) {
+  border:solid green 0px;
+  background:white;
+  border-width: 1px;
+  border-color: black;
+
+}
+
+tr:nth-child(odd) {
+  border:solid green 0px;
+  background:rgba(160,217,232,0.49);
+  border-width: 1px;
+  border-color: black;
+
+}
+
+.mytr{
+  background:cadetblue;
+}
